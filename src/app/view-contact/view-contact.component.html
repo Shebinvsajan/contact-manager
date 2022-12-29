@@ -1,0 +1,46 @@
+<div class="container mt-4 title">
+    <div class="row">
+        <div class="col">
+            <h1>
+                <i class="fa-sharp fa-solid fa-eye"></i> &nbsp;
+                View Contact
+            </h1>
+            <p style="text-align: justify;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quidem odio perferendis nihil, quis
+                porro molestias soluta ut ducimus a! Doloremque sequi nostrum quasi repudiandae, beatae eum. Assumenda,
+                perspiciatis doloremque.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quidem odio
+                perferendis nihil, quis
+                porro molestias soluta ut ducimus a! Doloremque sequi nostrum quasi repudiandae, beatae eum. Assumenda,
+                perspiciatis doloremque.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quidem odio
+                perferendis nihil, quis
+                porro molestias soluta ut ducimus a! Doloremque sequi nostrum quasi repudiandae, beatae eum. Assumenda,
+                perspiciatis doloremque.
+            </p>
+        </div>
+    </div>
+
+    <!-- view -->
+
+    <div class="container mt-4">
+        <div class="row border p-5 align-items-center">
+            <div class="col-md-4">
+                <!-- contact image -->
+                <img [src]="contact.photo"
+                    alt="no image" class="contact-img">
+                <br>
+                <a class="btn btn-warning ms-3 mt-3  " routerLink="/"><i class="fa-solid fa-circle-left "> &nbsp; </i>Go
+                    back</a>
+            </div>
+
+            <div class="col-md-8">
+                <ul class="list-group">
+                    <li class="list-group-item">Name:<b>{{contact.name}}</b> </li>
+                    <li class="list-group-item">Email: <b>{{contact.email}}</b></li>
+                    <li class="list-group-item">Mobile: <b>{{contact.mobile}}</b></li>
+                    <li class="list-group-item">Company: <b>{{contact.company}}</b></li>
+                    <li class="list-group-item">Title:<b>{{contact.title}}</b></li>
+                    <li class="list-group-item">Group: <b>{{groupName}}</b></li>
+                </ul>
+            </div>
+        </div>
+    </div>
