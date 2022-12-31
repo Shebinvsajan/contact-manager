@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { Mycontact } from 'src/models/myContact';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -6,21 +8,28 @@ import { ApiService } from '../services/api.service';
   templateUrl: './add-contact.component.html',
   styleUrls: ['./add-contact.component.css']
 })
-export class AddContactComponent implements OnInit{
+export class AddContactComponent implements OnInit {
 
-  allGroups:any=[]
-  contactName:string=''
-constructor(private api:ApiService){}
+  allGroups: any = []
+  contactName: string = ''
+  contact: Mycontact = {} as Mycontact
+  constructor(private api: ApiService,private router:Router) { }
 
-ngOnInit(): void {
-  this.api.getAllGroups()
-  .subscribe((data:any)=>{
-  this.allGroups=data
-    
-  })
-}
+  ngOnInit(): void {
+    this.api.getAllGroups()
+      .subscribe((data: any) => {
+        this.allGroups = data
 
-addContact(){
+      })
+  }
 
-}
+  addContact() {
+    this.api.addContact(this.contact)
+      .subscribe((data: any) => {
+        // navigate to admin page
+        this.router.navigateByUrl('')
+
+      }
+      )
+  }
 }

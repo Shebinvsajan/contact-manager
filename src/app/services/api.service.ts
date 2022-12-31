@@ -34,6 +34,12 @@ viewContact(contactId:string){
    return this.http.post(this.baseurl,contactBody)
 
   }
+  // function is for deleting a contact
+  deleteContact(contactId:any){
+   return this.http.delete(`${this.baseurl}/${contactId}`)
+
+
+  }
   
 }
   
