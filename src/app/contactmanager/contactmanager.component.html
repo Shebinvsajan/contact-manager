@@ -54,7 +54,8 @@
                                 <div class="col-md-1 d-flex flex-column justify-content-center align-items-center">
                                          <!-- view -->
                                     <a class="btn btn-warning" routerLink="/contact/view/{{contact.id}}"><i class="fa-sharp fa-solid fa-eye"></i></a>
-                                    <a class="btn btn-success mt-1" routerLink="/contact/edit/:contactId"><i class="fa-solid fa-pen"></i></a>
+                                    <!-- edit -->
+                                    <a class="btn btn-success mt-1" routerLink="/contact/edit/{{contact.id}}"><i class="fa-solid fa-pen"></i></a>
                                     <!-- delete  -->
                                     <button (click)="deleteContact(contact.id)" class="btn btn-danger mt-1"><i class="fa-solid fa-trash"></i></button>
 

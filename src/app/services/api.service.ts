@@ -40,6 +40,11 @@ viewContact(contactId:string){
 
 
   }
+  // update contact deatils according to user select
+  updateContact(contactId:any,contactBody:any){
+    return this.http.put(`${this.baseurl}/${contactId}`,contactBody)
+
+  }
   
 }
   
